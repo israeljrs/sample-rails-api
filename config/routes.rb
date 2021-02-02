@@ -11,4 +11,10 @@ Rails.application.routes.draw do
       sessions: 'sessions',
       registrations: 'registrations'
     }
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :cars
+    end
+  end
 end
